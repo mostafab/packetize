@@ -1,6 +1,7 @@
 'use strict';
 
 import Hapi from 'hapi';
+import index from './routes/index';
 
 const server = new Hapi.Server();
 
@@ -9,13 +10,7 @@ server.connection({
    port: 3000 
 });
 
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: (req, res) => {
-        return res('hello world');
-    }
-});
+index(server);
 
 server.start(err => {
     if (err) {

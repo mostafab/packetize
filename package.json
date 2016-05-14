@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm test",
     "start": "node lib/server.js",
-    "build": "babel src -d lib"
+    "build": "babel src -d lib",
+    "all": "babel src -d lib && node lib/server.js"
   },
   "repository": {
     "type": "git",
