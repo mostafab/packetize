@@ -1,0 +1,19 @@
+{
+  "name": "packet_maker",
+  "version": "1.0.0",
+  "description": "packet writer",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mostafab/packetize.git"
+  },
+  "author": "Mostafa Bhuiyan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mostafab/packetize/issues"
+  },
+  "homepage": "https://github.com/mostafab/packetize#readme"
+}
