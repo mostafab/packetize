@@ -1,6 +1,8 @@
 'use strict';
 
 import Hapi from 'hapi';
+import vision from 'vision';
+import pug from 'pug';
 import index from './routes/index';
 
 const server = new Hapi.Server();
@@ -11,6 +13,17 @@ server.connection({
 });
 
 index(server);
+
+server.register(vision, err => {
+    server.views({
+        engines: {
+            pug: pug
+        },
+        relativeTo: __dirname,
+        path: './templates',
+        layoutPath: './templates/layout'
+    });
+});
 
 server.start(err => {
     if (err) {

@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/mostafab/packetize#readme",
   "dependencies": {
-    "hapi": "^13.4.0"
+    "hapi": "^13.4.0",
+    "pug": "^0.1.0",
+    "vision": "^4.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.8.0",
