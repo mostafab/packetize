@@ -20,8 +20,14 @@
   },
   "homepage": "https://github.com/mostafab/packetize#readme",
   "dependencies": {
+    "babel-preset-react": "^6.5.0",
+    "flux": "^2.1.1",
+    "handlebars": "^4.0.5",
     "hapi": "^13.4.0",
-    "pug": "^0.1.0",
+    "inert": "^4.0.0",
+    "jsonwebtoken": "^6.2.0",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
     "vision": "^4.1.0"
   },
   "devDependencies": {
