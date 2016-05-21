@@ -26,7 +26,7 @@ server.register([
             html: handlebars
         },
         path: Path.join(__dirname, 'views')
-    })
+    });
     server.route({
         method: 'GET',
         path: '/public/{param*}',

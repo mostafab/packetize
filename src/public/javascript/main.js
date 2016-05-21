@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/Index';
+import IndexPage from './components/Index';
 
 
-ReactDOM.render(<Header color='red darken-4' title='Packetize' links={[]} />, document.getElementById('header'));
+ReactDOM.render(<IndexPage color='red darken-4' headerTitle='Packetize' headerLinks={[
+    {href: '/about', title: 'About'},
+    {href: '/login', title: 'Register'}
+]} />, document.getElementById('content'));
