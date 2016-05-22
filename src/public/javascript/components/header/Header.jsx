@@ -2,13 +2,16 @@ import React from 'react';
 
 export default class Header extends React.Component {
     render() {
+        const fixed = this.props.fixed ? 'navbar-fixed' : '';
         return (
-            <nav className={this.props.color}>
-                <div className="nav-wrapper">
-                    <a className="brand-logo center">{this.props.title}</a>
-                    <HeaderLinkGroup links={this.props.links} />
-                </div>
-            </nav>
+            <div className={fixed}>
+                <nav className={this.props.color}>
+                    <div className="nav-wrapper">
+                        <a className="brand-logo center">{this.props.title}</a>
+                        <HeaderLinkGroup links={this.props.links} />
+                    </div>
+                </nav>
+            </div>
         )
     }
 }

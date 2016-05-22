@@ -27,6 +27,7 @@
     "inert": "^4.0.0",
     "jquery": "^2.2.4",
     "jsonwebtoken": "^6.2.0",
+    "materialize-css": "^0.97.6",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "vision": "^4.1.0"
