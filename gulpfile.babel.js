@@ -3,6 +3,7 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 const webpack = require('webpack-stream');
+const vueify = require('gulp-vueify');
 
 gulp.task('babel', () => {
     
@@ -14,22 +15,21 @@ gulp.task('babel', () => {
         console.log(err.message);        
     });
     
-    gulp.src(['src/**/*', '!src/public/main.js'])
+    gulp.src(['src/**/*.js', '!src/public/main.js'])
     .pipe(b)
     .pipe(gulp.dest('lib'));
     
 });
 
-// gulp.task('webpack', () => {
-//     console.log('Webpack started');
-    
-//     gulp.src('src/javascript/main.js')
-//         .pipe(webpack())
-//         .pipe(gulp.dest('lib/public/javascript/main.min.js'));     
-// });
+gulp.task('vueify', () => {
+   gulp.src('src/public/javascript/vue-templates/**/*.vue')
+    .pipe(vueify())
+    .pipe(gulp.dest('lib/public/javascript/vue-templates')); 
+});
 
 gulp.task('watch', () => {
-   gulp.watch(['src/**/*'], ['babel']); 
+   gulp.watch(['src/**/*'], ['babel']);
+   gulp.watch(['src/public/javascript/vue-templates/**/*'], ['vueify']); 
 });
 
 gulp.task('default', ['watch']);

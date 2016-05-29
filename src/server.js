@@ -6,8 +6,14 @@ import inert from 'inert';
 import vision from 'vision';
 import handlebars from 'handlebars';
 import index from './routes/index';
+import authAPI from './routes/api/auth/auth';
+import setsAPI from './routes/api/sets/sets';
 
 const server = new Hapi.Server();
+
+let registerRoutes = (server, ...routes) => {
+    routes.forEach(route => route(server));
+}
 
 server.connection({
    host: 'localhost',
@@ -37,7 +43,7 @@ server.register([
         }
     });
     
-    index(server);
+    registerRoutes(server, index, authAPI, setsAPI);
 
     server.start(err => {
         if (err) {

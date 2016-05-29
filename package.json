@@ -20,21 +20,30 @@
   },
   "homepage": "https://github.com/mostafab/packetize#readme",
   "dependencies": {
-    "babel-preset-react": "^6.5.0",
-    "flux": "^2.1.1",
+    "eslint-config-airbnb": "^9.0.1",
     "handlebars": "^4.0.5",
     "hapi": "^13.4.0",
     "inert": "^4.0.0",
+    "joi": "^8.3.0",
     "jquery": "^2.2.4",
     "jsonwebtoken": "^6.2.0",
     "materialize-css": "^0.97.6",
-    "react": "^15.0.2",
-    "react-dom": "^15.0.2",
-    "vision": "^4.1.0"
+    "node-uuid": "^1.4.7",
+    "vision": "^4.1.0",
+    "vue": "^1.0.24",
+    "vue-router": "^0.7.13",
+    "vuex": "^0.6.3"
   },
   "devDependencies": {
     "babel-cli": "^6.8.0",
-    "babel-preset-es2015": "^6.6.0",
+    "babel-core": "^6.9.0",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "eslint": "^2.11.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.1",
+    "gulp-vueify": "0.0.3",
+    "vueify-insert-css": "^1.0.0",
     "webpack-stream": "^3.2.0"
   }
 }
