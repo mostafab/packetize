@@ -17,11 +17,12 @@ const state = {
 }
 
 const mutations = {
-    LOGIN_SUCCESS (state) {
+    LOGIN_SUCCESS (state, token) {
         state.header.headerTitle = 'Home';
         state.header.headerLinks = [
             {name: 'Logout'}
         ]
+        state.token = token;
         state.authenticated = true;
     },
     LOGOUT (state) {

@@ -18,9 +18,30 @@ export default (server) => {
             config: {
                 validate: {
                     payload: {
-                        'set-name': Joi.string().min(1).max(100)
+                        name: Joi.string().min(1).max(100)
                     }
                 }
+            }
+        },
+        {
+            method: 'GET',
+            path: '/api/sets/{id}',
+            handler: (request, reply) => {
+                reply(request.params);
+            }
+        },
+        {
+            method: ['PUT', 'PATCH'],
+            path: '/api/sets/{id}',
+            handler: (request, reply) => {
+                reply(request.params);
+            }
+        },
+        {
+            method: 'DELETE',
+            path: '/api/sets/{id}',
+            handler: (request, reply) => {
+                
             }
         }
     ])

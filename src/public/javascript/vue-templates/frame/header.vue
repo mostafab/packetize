@@ -1,14 +1,12 @@
-'use strict';
-
 /* Header component */
 
 <template>
 
     <div>
-        <nav class='blue darken-4'>
+        <nav class='blue-grey darken-3'>
             <div class='nav-wrapper'>
                 <a v-on:click="login" class='brand-logo center'>{{ headerTitle }}</a>
-                <ul id='nav-mobile' class='left hide-on-med-and-down' v-for='link in headerLinks'>
+                <ul class='left hide-on-med-and-down' v-for='link in headerLinks'>
                     <li>
                         <a> {{ link.name }} </a>
                     </li>
